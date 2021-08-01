@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LNs-r2-WWA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmbeddedNavigationControllersInTabBarViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3a-X7-NQg">
+                                <rect key="frame" x="155.5" y="420.5" width="103" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MML-Xl-6hD"/>
+                                    <segue destination="Q1g-gS-sYa" kind="show" id="I38-Kk-1hB"/>
+                                </connections>
+                            </button>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="9dz-xG-mk8">
+                                <rect key="frame" x="0.0" y="348.5" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9dz-xG-mk8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9gz-qa-sAH"/>
+                            <constraint firstItem="l3a-X7-NQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DPC-w0-mML"/>
+                            <constraint firstItem="l3a-X7-NQg" firstAttribute="top" secondItem="9dz-xG-mk8" secondAttribute="bottom" constant="16" id="QgU-iA-lgu"/>
+                            <constraint firstItem="l3a-X7-NQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XGu-l5-TB2"/>
+                            <constraint firstItem="9dz-xG-mk8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xhl-dd-Edw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JsT-n1-vXt"/>
+                    <connections>
+                        <outlet property="theSearchBar" destination="9dz-xG-mk8" id="6mY-0G-PiY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
+        </scene>
+        <!--Search Results View Controller-->
+        <scene sceneID="Nca-YL-ICP">
+            <objects>
+                <viewController id="Q1g-gS-sYa" customClass="SearchResultsViewController" customModule="EmbeddedNavigationControllersInTabBarViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Vx-Zg-0fD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4r-Jh-JAz">
+                                <rect key="frame" x="88" y="417.5" width="238" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="ICanDoBetter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="iCanDoBetterButtonTapped:" destination="Q1g-gS-sYa" eventType="touchUpInside" id="NR5-zq-BRO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r4r-Jh-JAz" firstAttribute="centerY" secondItem="6Vx-Zg-0fD" secondAttribute="centerY" id="WQt-l5-MC5"/>
+                            <constraint firstItem="r4r-Jh-JAz" firstAttribute="centerX" secondItem="6Vx-Zg-0fD" secondAttribute="centerX" id="Wov-KS-VxN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S8h-nN-3VJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iEX-t3-TNX"/>
+                    <connections>
+                        <outlet property="iCanDoBetterButton" destination="r4r-Jh-JAz" id="Shx-mU-mif"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ck0-Gz-idD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742.0289855072465" y="145.98214285714286"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="EVn-v0-V9t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ycA-xB-dPc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fuE-0D-K1d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9nm-7Y-8lD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fvu-cO-FDt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BG-Hw-F6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Test General Tab Bar Controller-->
+        <scene sceneID="66n-BL-1FU">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LNs-r2-WWA" customClass="TestGeneralTabBarController" customModule="EmbeddedNavigationControllersInTabBarViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kwS-0h-Si5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ycA-xB-dPc" kind="relationship" relationship="viewControllers" id="nF3-EO-jMk"/>
+                        <segue destination="k0q-0F-QHh" kind="relationship" relationship="viewControllers" id="Lbj-Df-TG1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd2-cO-ell" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="492"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="4XC-bq-LAV">
+            <objects>
+                <viewController id="k0q-0F-QHh" customClass="CreateDefinitionViewController" customModule="EmbeddedNavigationControllersInTabBarViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2II-v3-F5a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE A WORD!" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mM-Ku-PHT">
+                                <rect key="frame" x="65.5" y="426.5" width="283.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-Ih-uJF">
+                                <rect key="frame" x="229" y="76" width="153" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="PLAY AUDIO">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAudioButtonPressed:" destination="k0q-0F-QHh" eventType="touchUpInside" id="aGK-ro-alh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b7K-kj-qoC" firstAttribute="trailing" secondItem="b5G-Ih-uJF" secondAttribute="trailing" constant="32" id="2py-yI-IaJ"/>
+                            <constraint firstItem="b5G-Ih-uJF" firstAttribute="top" secondItem="b7K-kj-qoC" secondAttribute="top" constant="32" id="kCP-hj-gaM"/>
+                            <constraint firstItem="8mM-Ku-PHT" firstAttribute="centerY" secondItem="2II-v3-F5a" secondAttribute="centerY" id="mlf-Jk-SCR"/>
+                            <constraint firstItem="8mM-Ku-PHT" firstAttribute="centerX" secondItem="2II-v3-F5a" secondAttribute="centerX" id="zBG-KG-quB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7K-kj-qoC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8KX-Lr-pDy"/>
+                    <connections>
+                        <outlet property="playAudioButton" destination="b5G-Ih-uJF" id="43C-EE-3zc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elS-ow-118" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="955"/>
+        </scene>
+    </scenes>
+</document>
