@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseCore
+import FirebaseStorage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        // this statement below won't work unless you import FirebaseStorage, which is NOT in the documentation.
+        let storage = Storage.storage()
+        
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
